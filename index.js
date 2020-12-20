@@ -11,11 +11,10 @@ class Formatter {
     static titleize(string) {
         let a = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
         let arr = string.split(" ");
-        if (arr != a) {
-            for (let i = 0; i < arr.length; i++) {
-                let word = arr[i];
+        for (let i = 0; i < arr.length; i++) {
+            let word = arr[i];
+            if (arr != a)
                 arr[i] = word[0].toUpperCase() + word.substring(1);
-            }
         }
 
         return arr.join(" ");
